@@ -1,0 +1,36 @@
+# Nombre identificador del servicio
+spring:
+  application:
+    name: servicio-reservas
+  h2:
+    console:
+      enabled: true
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: admin
+    password:
+
+  sql:
+    init:
+      mode: always 
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate.format_sql: true
+    show-sql: true
+    defer-datasource-initialization: true
+
+server: 
+  port: 10000
+# Config de el servidor  
+eureka: 
+  client:    
+    serviceUrl:
+      # Direccion a la que se conecta el microservicio con eureka
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
