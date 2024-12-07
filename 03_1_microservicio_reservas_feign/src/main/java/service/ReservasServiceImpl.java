@@ -22,9 +22,6 @@ public class ReservasServiceImpl implements ReservasService {
 		reservas.save(reserva);
 
 		feignVuelos.modificarVuelo(reserva.getVuelo(), totalPersonas);
-
-//		template.put(url + "/vuelos/{p1}/{p2}", null, reserva.getVuelo(), totalPersonas);
-
 	}
 
 	@Override
