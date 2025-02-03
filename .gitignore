@@ -16,3 +16,5 @@
 .metadata/
 /curso/
 **/.gitignore
+.idea/
+00_eureka_server/eureka_server.iml
